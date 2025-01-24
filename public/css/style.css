@@ -1,0 +1,237 @@
+/* Variáveis para o tema claro (Light Mode - padrão) */
+:root {
+    --background-color: #f4f7fa;
+    --text-color: #333;
+    --card-background: #ffffff;
+    --card-border: #e0e0e0;
+    --navbar-background: #474746;
+    --navbar-text: #ffffff;
+    --button-primary: #f28d0b;
+    --button-primary-hover: #d6740a;
+    --table-header: #f28d0b;
+    --footer-background: #f28d0b;
+}
+
+/* Variáveis para o tema escuro (Dark Mode) */
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --card-background: #3d3c3c;
+    --card-border: #c0bbbb;
+    --navbar-background: #212121;
+    --navbar-text: #ffffff;
+    --button-primary: #dc3545;
+    --button-primary-hover: #a71d2a;
+    --table-header: #dc3545;
+    --footer-background: #212121;
+}
+
+/* Estilo Geral */
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+.navbar {
+    background-color: var(--navbar-background);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: var(--navbar-text);
+}
+
+.navbar-brand img {
+    height: 60px;
+    margin-right: 15px;
+}
+
+.navbar-brand span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--navbar-text);
+}
+
+.nav-link {
+    font-size: 1rem;
+    color: var(--navbar-text) !important;
+    padding: 10px;
+}
+
+.nav-link:hover {
+    color: var(--button-primary) !important;
+}
+
+/* Gráficos */
+.chart-card {
+    background-color: var(--card-background);
+    border: 1px solid var(--card-border);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 20px;
+}
+
+.chart-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.chart-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+canvas {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: 300px;
+    border-radius: 10px;
+}
+
+/* Estatísticas */
+.card {
+    border: none;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--card-background);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card .card-body {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-color);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+/* Tabela */
+.table {
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table th {
+    background-color: var(--table-header);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.table td {
+    font-size: 0.95rem;
+    color: var(--text-color) !important;
+    vertical-align: middle;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--card-background);
+}
+
+.table-hover tbody tr:hover {
+    background-color: #787c80;
+    cursor: pointer;
+}
+
+/* Botões */
+.btn-outline-primary {
+    color: var(--button-primary);
+    border-color: var(--button-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--button-primary-hover);
+    color: #fff;
+}
+
+.btn-outline-danger {
+    color: #FF261E;
+    border-color: #FF261E;
+}
+
+.btn-outline-danger:hover {
+    background-color: #FF261E;
+    color: #fff;
+}
+
+/* Formulário de Pesquisa */
+.input-group {
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.input-group .form-control {
+    border-radius: 8px 0 0 8px;
+    border-color: var(--button-primary);
+}
+
+.input-group .btn {
+    border-radius: 0 8px 8px 0;
+    background-color: var(--button-primary);
+    color: #fff;
+}
+
+.input-group .btn:hover {
+    background-color: var(--button-primary-hover);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--footer-background);
+    color: #fff;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilo do Botão com Ícones de Sol e Lua */
+.theme-toggle button {
+    border: none;
+    background: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--button-primary);
+    transition: color 0.3s ease;
+}
+
+.theme-toggle button:hover {
+    color: var(--button-primary-hover);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .chart-card {
+        padding: 15px;
+    }
+
+    .chart-title {
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+
+    .table th, .table td {
+        font-size: 0.85rem;
+    }
+}
